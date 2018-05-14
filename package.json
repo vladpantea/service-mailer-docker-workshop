@@ -1,0 +1,26 @@
+{
+  "name": "service-mailer-docker-workshop",
+  "version": "1.0.0",
+  "description": "Dummy service mailer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vladpantea/service-mailer-docker-workshop.git"
+  },
+  "author": "Vlad Pantea",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vladpantea/service-mailer-docker-workshop/issues"
+  },
+  "homepage": "https://github.com/vladpantea/service-mailer-docker-workshop#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "nodemailer": "^4.6.4"
+  }
+}
