@@ -5,6 +5,7 @@ const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
 
+let servicePort = process.env.SERVICE_PORT || 3001;
 // parse application/json
 app.use(bodyParser.json())
 
@@ -23,8 +24,8 @@ app.post('/', (req, res) => {
             port: 587,
             secure: false, // true for 465, false for other ports
             auth: {
-                user: process.env.email, // generated ethereal user
-                pass: process.env.password // generated ethereal password
+                user: process.env.email || "oqjvh46u3uauklme@ethereal.email", // generated ethereal user
+                pass: process.env.password || "JxuB4AfCuy4NsabDbz" // generated ethereal password
             }
         });
 
@@ -51,4 +52,4 @@ app.post('/', (req, res) => {
     });
 });
 
-app.listen(process.env.SERVICE_PORT, () => console.log('Example app listening on port '+process.env.SERVICE_PORT))
+app.listen(servicePort, () => console.log('Example app listening on port '+servicePort))
